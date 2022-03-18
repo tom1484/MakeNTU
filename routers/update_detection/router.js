@@ -2,15 +2,15 @@ const express = require("express")
 const mongoose = require("mongoose")
 
 // import mongoose schemas
-const { Detection } = require("../schemas/detection")
-const { RoadObject } = require("../schemas/road_object")
-const { Lamp } = require("../schemas/lamp")
+const { Detection } = require("../../schemas/detection")
+const { RoadObject } = require("../../schemas/road_object")
+const { Lamp } = require("../../schemas/lamp")
 
 
 mongoose.connect("mongodb://localhost:27017/makentu")
 
 const router = express.Router()
-router.post("/detection_update", async (req, res) => {
+router.post("/update_detection", async (req, res) => {
     const post_data = req.body
     console.log(post_data)
 

@@ -4,7 +4,7 @@ from datetime import datetime
 from time import time
 
 BASE_URL = 'http://localhost:1484'
-API_AUTH = '/makentu/detection_update'
+API_AUTH = '/makentu/update_detection'
 
 session = requests.Session()
 
