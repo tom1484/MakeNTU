@@ -7,5 +7,5 @@ app.use(express.json())
 app.use("/makentu", require("./routers/update_detection/router.js"))
 app.use("/makentu", require("./routers/fetch_object/router.js"))
 
-app.listen(1484)
+app.listen(49999)
 
