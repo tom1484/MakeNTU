@@ -1,5 +1,5 @@
 {
-  "name": "ntuee-makerspaceloginsystem",
+  "name": "makentu",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tom1484/NTUEE-MakerSpaceLoginSystem.git"
+    "url": "git+https://github.com/tom1484/MakeNTU.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tom1484/NTUEE-MakerSpaceLoginSystem/issues"
+    "url": "https://github.com/tom1484/MakeNTU/issues"
   },
-  "homepage": "https://github.com/tom1484/NTUEE-MakerSpaceLoginSystem#readme",
+  "homepage": "https://github.com/tom1484/MakeNTU#readme",
   "dependencies": {
     "crypto": "^1.0.1",
     "express": "^4.17.3",
