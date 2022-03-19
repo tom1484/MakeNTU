@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 from time import time
 
-BASE_URL = 'http://localhost:49999'
+BASE_URL = 'http://localhost:1484'
 API_AUTH = '/makentu/update_detection'
 
 session = requests.Session()
@@ -11,8 +11,7 @@ session = requests.Session()
 _data = {
     "ID": "0", 
     "objects": [
-            { "type": "car", "position": [1, 3] }, 
-            { "type": "car", "position": [3, 2] }, 
+            { "type": "person", "position": [0, -250] }, 
         ], 
 }
 

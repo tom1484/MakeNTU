@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "app": "nodemon app.js", 
+    "app": "nodemon app.js",
     "test": "nodemon test.js"
   },
   "repository": {
@@ -20,7 +20,8 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "express": "^4.17.3",
-    "mongoose": "^6.2.3",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.2.7",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {

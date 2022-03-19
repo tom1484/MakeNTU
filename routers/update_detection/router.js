@@ -12,11 +12,12 @@ mongoose.connect("mongodb://localhost:27017/makentu")
 const router = express.Router()
 router.post("/update_detection", async (req, res) => {
     const post_data = req.body
-    console.log(post_data)
+    // console.log(post_data)
+
 
     await Lamp.findOne({ ID: post_data.ID })
         .then((lamp) => {
-            console.log(lamp)
+            // console.log(lamp)
 
             if (lamp === null) {
                 res.json({ flag: "0" })
@@ -30,10 +31,20 @@ router.post("/update_detection", async (req, res) => {
             console.log(objects)
 
             Detection.findOneAndUpdate(
-                { ID: "0" }, 
+                { ID: lamp.ID }, 
                 { $set: { objects: objects } }, 
+                null, 
+                (err, docs) => {
+                    if (err) {
+                        console.log(err)
+                        res.json({ flag: "0" })
+                    }
+                    else {
+                        console.log(docs)
+                        res.json({ flag: "1" })
+                    }
+                }
             )
-            res.json({ flag: "1" })
         })
 })
 
