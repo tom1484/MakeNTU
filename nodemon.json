@@ -1,7 +1,0 @@
-{
-	"events": {
-		"restart": "kill-port 1484",
-		"crash": "kill-port 1484"
-	},
-	"delay": "500"
-}

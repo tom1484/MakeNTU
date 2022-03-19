@@ -1,0 +1,30 @@
+{
+  "name": "makentu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "app": "nodemon app.js",
+    "test": "nodemon test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tom1484/MakeNTU.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tom1484/MakeNTU/issues"
+  },
+  "homepage": "https://github.com/tom1484/MakeNTU#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.17.3",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.2.7",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "kill-port": "^1.6.1"
+  }
+}
