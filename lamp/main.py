@@ -50,7 +50,7 @@ def fetch_object():
 
 def LiFiSend():
     data = [lamp_spec["position"][0], lamp_spec["position"][1], len(road_objects), len(map["roads"])]
-    
+
     # add road objects into LiFi data
     for object in road_objects:
         data.append(object["position"][0])
@@ -79,27 +79,27 @@ while True:
         detecting = True
         detect_thread = Thread(target=lambda: detect(frame))
         detect_thread.start()
-    
+
     # draw bounding boxes on frame
     if bbox_frame is not None:
         frame[bbox_frame > 0] = 0
         frame += bbox_frame
         # cv2.imshow("img", bbox_frame)
-    
+
     # start fetching if previous thread ends
     if not fetching:
         fetching = True
         fetch_thread = Thread(target=lambda: fetch_object())
         fetch_thread.start()
-    
+
     # send LiFi signal
     LiFiSend()
 
-    cv2.imshow("img", frame)
-    if cv2.waitKey(1) == ord('q'):
-        if detect_thread.is_alive():
-            detect_thread.join()
-        if fetch_thread.is_alive():
-            fetch_thread.join()
-        break
+    # cv2.imshow("img", frame)
+    # if cv2.waitKey(1) == ord('q'):
+    #     if detect_thread.is_alive():
+    #         detect_thread.join()
+    #     if fetch_thread.is_alive():
+    #         fetch_thread.join()
+    #     break
         # sys.exit()

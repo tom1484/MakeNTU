@@ -51,7 +51,7 @@ class RoadObjectDetector:
         bbox_frame = np.zeros(frame.shape, dtype=np.uint8)
         for i in range(len(scores)):
             # print(self.labels[int(classes[i])])
-            if (scores[i] > 0.7) and (scores[i] <= 1.0) and (int(classes[i]) in [0, 2]):
+            if (scores[i] > 0.5) and (scores[i] <= 1.0) and (int(classes[i]) in [0, 2]):
                 # Get bounding box coordinates and draw box
                 # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
                 ymin = int(max(1, boxes[i][0] * cap_height))
